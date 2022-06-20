@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&family=Varela+Round&display=swap');
+
+*,*::after,*::before{
+    box-sizing: border-box; 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    opacity: 0.85;
+    position: fixed;
+    background-color: red;
+    z-index: 69;
+}
+
+body{
+    background: #222;
+    height: 200vh;
+}
+
+.welcome-page{
+    /* height: 120vh; */
+    padding-top: 60vh;
+    padding-bottom: 60vh;
+    background-image: url(./imgs/pexels-pixabay-270404.jpg);
+    background-color: #333;
+    background-blend-mode: multiply;
+    background-size: cover;
+    display: block;
+}
+
+.welcome-title{
+    color: white;
+    text-align: center;
+}
