@@ -1,41 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&family=Varela+Round&display=swap');
 
+:root{
+    --clr-red: #E3311D;
+    --clr-black: #050507;
+    --clr-light-black: #362E2D;
+    --clr-grey: #7C8685;
+    --clr-light-grey: #AAACA1;
+}
+
 *,*::after,*::before{
     box-sizing: border-box; 
 }
 
 *{
     margin: 0;
-    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
 }
 
 header{
     width: 100%;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    text-align: center;
     opacity: 0.85;
     position: fixed;
-    background-color: red;
+    background-color: var(--clr-light-grey);
     z-index: 69;
 }
 
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span::after,
+.nav-toggle-label span::before {
+    content: "";
+    margin-top: 0.5rem;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: var(--clr-black);
+    width: 2em;
+    height: 0.125em;
+    border-radius: 0.125em;
+    position: relative;
+}
+
+.nav-toggle-label span::after{
+    /* top: 0.5rem;*/ 
+    height: 100%; 
+}
+
+.nav-toggle-label span::before{
+    /* bottom: 0.5rem; */
+}
+
+.nav-toggle {
+    display: none;
+}
+
+nav{
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+    background-color: var(--clr-light-grey);
+    display: none;
+}
+
+nav ul{
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1em;
+}
+
+nav a{
+    color: var(--clr-black);
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: capitalize;
+}
+
+nav a:hover{
+    color:var(--clr-red);
+}
+
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+.logo{
+
+}
+
 body{
-    background: #222;
+    background: var(--clr-black);
     height: 200vh;
 }
 
 .welcome-page{
-    /* height: 120vh; */
-    padding-top: 60vh;
-    padding-bottom: 60vh;
+    padding-top: 50vh;
+    padding-bottom: 50vh;
     background-image: url(./imgs/pexels-pixabay-270404.jpg);
     background-color: #333;
     background-blend-mode: multiply;
     background-size: cover;
+    background-position-x: center;
     display: block;
 }
 
 .welcome-title{
     color: white;
     text-align: center;
+    opacity: 1;
 }
